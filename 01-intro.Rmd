@@ -194,8 +194,8 @@ ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 ```
 
 ### Summary
-
-Model used: Poverty analysis [@Alkire2011]
-Preamble: See Chapter \@ref(intro)
-Figure:  See Figure \@ref(fig:uncensored-fig)
-Table:  See Table \@ref(tab:uncensored-tab)
+* **Our goal**: See Chapter \@ref(intro)
+* **Model used**: Poverty analysis [@Alkire2011]
+* **Indicator Contributions**
+  * Figure:  See Figure \@ref(fig:uncensored-fig)
+  * Table:  See Table \@ref(tab:uncensored-tab)
