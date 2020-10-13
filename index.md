@@ -1,4 +1,9 @@
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./toc.css">
+</head>
+
 <style>
 .page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
 .page-header h2{font-size: 24px;
@@ -92,9 +97,7 @@ body{width: 1200px; margin: 0;}
  }
 
 </style>
-<link rel="stylesheet" type="text/css" href="./style.css">
-<link rel="stylesheet" type="text/css" href="./toc.css">
-</head>
+
 
 # Empowerment in Agriculture
 
@@ -122,7 +125,7 @@ For more details refer to the [R-Model workflow](https://complexdatainsights/ind
 
 Model: [@Alkire2011]
 
-```{}
+```{block, type="tmbinfo", echo=TRUE}
 # Load required packages
 load("data/packages.RData")
 load("data/globalSetup.RData")
