@@ -14,7 +14,25 @@ description: "Construction of empowerment indexes using the M0 model [@Alkire201
 
 # Prerequisites
 
-This book contains models constructed from workflows developed previously [@Alkire2011]
+This book is intendes for providing empowerment model models translated from literature into R code. For the most part we use M0 model developed previously for global poverty assessment [@Alkire2011].
+
+## Methodology
+```{block, type="tmbinfo", echo=TRUE}
+
+1. Method 1 focuses on the percentage of empowered women and adequacies among the disempowered. 
+2. Method 2 focuses on the percentage of disempowered women and the percentage of domains in which they lack adequate achievements. 
+
+> Method 2 is commonly used as it is consistent with the M0 measurement (Alkire and Foster 2011).
+
+### Apply disempowerment Cutoff (k)
+
+*Censoring the inadequacies of the empowered**
+
+* The disempowerment cut-off (k=20% ) is the percentage of weighted inadequacies a woman must have to be considered disempowered. 
+* If ciw <= k the score is replaced by 0.
+* Any existing inadequacies are not considered in the “Disempowered headcounts.
+* Now the matrix has new column `ciwk` that contains censored inadequacy score.
+```
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
 
