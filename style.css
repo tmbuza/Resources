@@ -21,7 +21,6 @@ pre code {
   white-space: inherit;
 }
 
-
 /*##################################*/
 
 /*My styles*/
@@ -67,7 +66,6 @@ pre code {
     min-width: 40px;
     word-break: break-all;
 }
-
 
 #welcome h3, #license h3, #citation h3 {
     font-size: 2em;
