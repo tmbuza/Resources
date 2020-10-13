@@ -4,12 +4,12 @@
   <link rel="stylesheet" type="text/css" href="./toc.css">
 </head>
 
-<style>
+<!-- <style>
 .page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
 .page-header h2{font-size: 24px;
 body{width: 1200px; margin: 0;}
 
-</style>
+</style> -->
 
 
 # Empowerment in Agriculture
