@@ -24,10 +24,6 @@ This book is intendes for providing empowerment model models translated from lit
 
 > Method 2 is commonly used as it is consistent with the M0 measurement (Alkire and Foster 2011).
 
-### Apply disempowerment Cutoff (k)
-
-*Censoring the inadequacies of the empowered**
-
 * The disempowerment cut-off (k=20% ) is the percentage of weighted inadequacies a woman must have to be considered disempowered. 
 * If ciw <= k the score is replaced by 0.
 * Any existing inadequacies are not considered in the “Disempowered headcounts.
