@@ -3,6 +3,94 @@
 .page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
 .page-header h2{font-size: 24px;
 body{width: 1200px; margin: 0;}
+
+.tmbcomment, .tmbalert, .tmbinfo, .tmbqns, .tmbcheck1, .tmbcheck2, .tmbshare, .tmbarrowF, .tmb2arrowsF {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #f5f5f5;
+  position:relative;
+}
+
+.tmbcomment:before {
+    content: "\f14d";
+  font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbalert:before {
+    content: "\f06a";
+  font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbinfo:before {
+    content: "\f05a";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbinfo2:before {
+    content: "\10f129";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+ 
+.tmbarrowF:before {
+    content: "\f0a9";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+ 
+.tmb2arrowsF:before {
+    content: "\f101";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+ 
+.tmbshare:before {
+    content: "\f064";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 35px;
+ }
+ 
+.tmbqns:before {
+    content: "\f059";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
+.tmbcheck1:before {
+    content: "\f14a";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+ 
+.tmbcheck2:before {
+    content: "\f058";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    font-size: 45px;
+ }
+
 </style>
 <link rel="stylesheet" type="text/css" href="./style.css">
 <link rel="stylesheet" type="text/css" href="./toc.css">
@@ -24,14 +112,14 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
 # Focus: Five Dimensions of Empowerment
-<<<<<<< HEAD
+
 
 ## Methodology 
 
 Here we adopt the model develoved previously [@Alkire2011]
 
 For more details refer to the [R-Model workflow](https://complexdatainsights/indexes/fiveDE.html)
-=======
+
 Model: [@Alkire2011]
 
 ```{}
@@ -50,8 +138,6 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ## 5DE Methodology 
 
 [R-Model workflow](https://tmbuza.github.io/indexes/)
->>>>>>> gh_pages
-
 
 
 1. Method 1 focuses on the percentage of empowered women and adequacies among the disempowered. 
