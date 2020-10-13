@@ -1,4 +1,5 @@
 <head>
+<<<<<<< HEAD
 <style>
 /*.page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
 .page-header h2{font-size: 24px;
@@ -7,6 +8,16 @@ body{width: 1200px; margin: 0;}*/
 
 <link rel="stylesheet" type="text/css" href="./style.css">
 <link rel="stylesheet" type="text/css" href="./toc.css">
+=======
+<!--   <style>
+.page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
+.page-header h2{font-size: 24px;
+body{width: 1200px; margin: 0;}
+</style> -->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="toc.css">
+>>>>>>> gh_pages
 
 </head>
 
@@ -26,12 +37,33 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
 # Focus: Five Dimensions of Empowerment
+<<<<<<< HEAD
 
 ## Methodology 
 
 Here we adopt the model develoved previously [@Alkire2011]
 
 For more details refer to the [R-Model workflow](https://complexdatainsights/indexes/fiveDE.html)
+=======
+Model: [@Alkire2011]
+
+```{}
+# Load required packages
+load("data/packages.RData")
+load("data/globalSetup.RData")
+
+source("_common.R")
+
+library(tidyverse)
+library(viridis)
+
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+## 5DE Methodology 
+
+[R-Model workflow](https://tmbuza.github.io/indexes/)
+>>>>>>> gh_pages
 
 
 
