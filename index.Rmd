@@ -9,7 +9,7 @@ bibliography: [book.bib, packages.bib, indexes.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: tmbuza/indexbook
-description: "Construction of empowerment indexes using the M0 model."
+description: "Construction of empowerment indexes using the M0 model [@Alkire2011]."
 ---
 
 # Prerequisites
