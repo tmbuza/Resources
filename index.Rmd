@@ -15,9 +15,11 @@ show_downloads: true
 favicon: "favicon.ico"
 ---
 
-# Prerequisites
+## Motivation
+Strengthening reproducibility, portability and shareability. Here we will translate models developed elsewhere [@Alkire2011; @Alkire2012; @Alkire2013; @Malapit2019; ]. We are going to translate calculations for computing empowerment in agriculture indexes into R code. 
 
-This book is intendes for providing empowerment model models translated from literature into R code. For the most part we use M0 model developed previously for global poverty assessment [@Alkire2011].
+## Getting Started
+
 
 ## Methodology
 ```{block, type="tmbinfo", echo=TRUE}
