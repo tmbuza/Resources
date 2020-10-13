@@ -1,0 +1,41 @@
+/*From bookdown*/
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+/*##################################*/
+
+/*My styles*/
+
+.page-header {
+	color: #ffff;
+	text-align: center; 
+	padding: 20px; 
+	background-image: linear-gradient(180deg, #1d1599, #054321);
+}
+
+.page-header h1{
+	font-size: 3.2;
+	color: orange;
+}
+.page-header h2{
+	font-size: 2.2em;
+	color: orange;
+}
+
+.project-name {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+    background-color: #00fff0
+}
