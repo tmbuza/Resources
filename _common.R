@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
   fig.show='asis',
   dev = 'png',
   fig.align='center',
-  out.width = "80%",
+  out.width = "70%",
   out.height = "80%",
   # fig.width = 7,
   # fig.asp = 0.618,  # 1 / phi
