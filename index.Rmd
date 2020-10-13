@@ -1,6 +1,6 @@
 --- 
-title: "Empowerment in Agriculture"
-author: "Teresia Mrema Buza"
+# title: "Empowerment in Agriculture"
+# author: "Teresia Mrema Buza"
 date: "Updated: `r Sys.time()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -14,6 +14,8 @@ description: "Construction of empowerment indexes using the M0 model [@Alkire201
 show_downloads: true
 favicon: "favicon.ico"
 ---
+
+# Empowerment in Agriculture
 
 ## Motivation
 Strengthening reproducibility, portability and shareability. Here we will translate models developed elsewhere [@Alkire2011; @Alkire2012; @Alkire2013; @Malapit2019; ]. We are going to translate calculations for computing empowerment in agriculture indexes into R code. 

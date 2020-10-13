@@ -1,0 +1,4 @@
+# (PART) Empowerment Index {-}
+
+# Women Empowerment in Agriculture Index {#weai}
+WEAI measures women’s empowerment in various components and indicators of agricultural production [@Malapit2019]. This model can be adopted in measuring non-agricutural development by replacing the 5DE and its nested indicators and variables with those related to the subject.
