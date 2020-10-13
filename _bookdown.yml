@@ -1,5 +1,16 @@
 book_filename: "_indexes"
 language:
   ui:
-    chapter_name: "Index "
+    chapter_name: ""
 delete_merged_file: true
+
+
+rmd_files: [
+"index.Rmd",
+"01-intro.Rmd",
+"02-literature.Rmd",
+"03-method.Rmd",
+"04-application.Rmd",
+"05-summary.Rmd",
+"999-references.Rmd"
+]
