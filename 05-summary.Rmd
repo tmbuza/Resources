@@ -36,7 +36,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 1. Method 1 focuses on the percentage of empowered women and adequacies among the disempowered. 
 2. Method 2 focuses on the percentage of disempowered women and the percentage of domains in which they lack adequate achievements. 
 
-> Method 2 is commonly used as it is consistent with the M0 measurement (Alkire and Foster 2011).
+> Method 2 is commonly used as it is consistent with the M0 measurement [@Alkire2011].
  the matrix has new column `ciwk` that contains censored inadequacy score.
 
 
