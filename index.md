@@ -1,24 +1,11 @@
 <head>
-<<<<<<< HEAD
 <style>
-/*.page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
-.page-header h2{font-size: 24px;
-body{width: 1200px; margin: 0;}*/
-</style>
-
-<link rel="stylesheet" type="text/css" href="./style.css">
-<link rel="stylesheet" type="text/css" href="./toc.css">
-=======
-<!--   <style>
 .page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
 .page-header h2{font-size: 24px;
 body{width: 1200px; margin: 0;}
-</style> -->
-
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="toc.css">
->>>>>>> gh_pages
-
+</style>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="./toc.css">
 </head>
 
 # Empowerment in Agriculture
