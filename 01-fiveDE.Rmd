@@ -140,7 +140,7 @@ knitr::kable(
 ```
 
 ### Plot the Results
-```{r uncensored-fig, fig.cap='Whole uncensored set!', out.width='80%', fig.asp=.75, fig.align='center'}
+```{r uncensored-fig, fig.cap='Absolute and relative contribution of Indicator to disempowerment', out.width='80%', fig.asp=.75, fig.align='center'}
 library(tidyverse)
 library(viridis)
 
