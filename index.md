@@ -52,7 +52,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 ## 5DE Methodology 
 
-[R-Model workflow](https://tmbuza.github.io/indexes/)
+[R-Model workflow](https://tmbuza.github.io/indexbook/)
 
 
 1. Method 1 focuses on the percentage of empowered women and adequacies among the disempowered. 
@@ -193,4 +193,4 @@ ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 
 <img src="https://github.com/tmbuza/indexbook/blob/gh_pages/_figs/IDX-uncensored-fig-1.png">
 
-<img src="./_figs/IDX-uncensored-fig-1.png">
+<img src="./IDX-uncensored-fig-1.png">
