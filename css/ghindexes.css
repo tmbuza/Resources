@@ -1,7 +1,5 @@
 /*By Author*/
 .page-header {
-  max-width: 80rem;
-  margin: 0 auto;
 	color: #ffff;
 	text-align: center; 
 	padding: 5rem 6rem; 
@@ -25,13 +23,6 @@
 
 /*##################################*/
 
-.main-content {
-    max-width: 80rem;
-    padding: 2rem 6rem;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
 .main-content h1, .main-content h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -44,4 +35,3 @@
   font-weight: normal;
   color: #159957;
 }
-
