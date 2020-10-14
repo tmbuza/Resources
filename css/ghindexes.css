@@ -1,5 +1,7 @@
 /*By Author*/
 .page-header {
+  max-width: 80rem;
+  margin: 0 auto;
 	color: #ffff;
 	text-align: center; 
 	padding: 5rem 6rem; 
