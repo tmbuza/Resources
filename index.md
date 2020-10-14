@@ -193,3 +193,4 @@ ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 
 <img src="https://github.com/tmbuza/indexbook/blob/gh_pages/_figs/IDX-uncensored-fig-1.png">
 
+<img src="./_figs/IDX-uncensored-fig-1.png">
