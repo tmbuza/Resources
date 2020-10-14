@@ -189,7 +189,8 @@ p2 <- HCRatio[1:10,] %>%
 ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 ```
 
-![](_figs/IDX-uncensored-fig-1.png)
+![](./_figs/IDX-uncensored-fig-1.png)
 
+<img src="https://github.com/tmbuza/indexbook/blob/gh_pages/_figs/IDX-uncensored-fig-1.png">
 
-
+<img src="./_figs/IDX-uncensored-fig-1.png">
