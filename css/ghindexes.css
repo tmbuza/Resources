@@ -1,23 +1,4 @@
-/*From bookdown*/
-p.caption {
-  color: #777;
-  margin-top: 10px;
-}
-p code {
-  white-space: inherit;
-}
-pre {
-  word-break: normal;
-  word-wrap: normal;
-}
-pre code {
-  white-space: inherit;
-}
-
-/*##################################*/
-
-/*My styles*/
-
+/*By Author*/
 .page-header {
 	color: #ffff;
 	text-align: center; 
@@ -42,6 +23,9 @@ pre code {
 
 /*##################################*/
 
+.main-content {
+width: 80%
+}
 .main-content h1, .main-content h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
