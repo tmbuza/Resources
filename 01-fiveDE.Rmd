@@ -1,10 +1,7 @@
 # (PART) Index Components {-}
 
 # Components of an Index {#components}
-
-## Dimensions of Empowerment in Agriculture {#fiveDE}
-
-### Computing the 5DE subindexes
+## Computing the 5DE subindexes {#fiveDE}
 * Model: [@Alkire2011]
 
 
