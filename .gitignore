@@ -4,26 +4,6 @@ _indexes.html
 
 ##################
 
-_book
-_bookdown.yml
-_build.sh
-_common.R
-_config.yml
-_data
-_deploy.sh
-_figs
-*.pdf
-*.tex
-*.yml
-css
-Dockerfile
-docs
-index.md
-index.Rmd
-indexbook.Rproj
-*.bib
-now.json
-preamble.tex
 
 ##################
 
