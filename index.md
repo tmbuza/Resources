@@ -3,16 +3,6 @@
   <link rel="stylesheet" type="text/css" href="./css/ghindexes.css">
 </head>
 
-<!-- <style>
-.page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
-.page-header h2{font-size: 24px;
-body{width: 1200px; margin: 0;}
-
-</style> -->
-
-# Constructing Indexes With R
-
-## Aim: Aggregating Complex Mathematical Formulas Into Reproducible R Code
 
 ### Summary
 
