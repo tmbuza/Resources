@@ -4,7 +4,7 @@
 </head>
 
 
-## Summary
+# Summary
 
 This is an **On-going Project** that creates R-codes for computing indexes from mathematical formulas. Most of the indexes are used for tracking improvement, empowerment or changes. Please expect frequent file updates. The table below shows some on-going related works:
 
@@ -32,7 +32,7 @@ library(viridis)
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-# Focus: Five Dimensions of Empowerment
+## Focus: Five Dimensions of Empowerment
 
 
 ## Methodology 
@@ -134,7 +134,7 @@ saveRDS(censored, ("data/censored.rds"))
 <br>
 <br>
 
-### Censored Haedcount Ratios
+## Censored Headcount Ratios
 ```{r}
 censored <- readRDS("data/censored.rds")
 
