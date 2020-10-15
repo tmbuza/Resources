@@ -27,7 +27,7 @@ This is an **On-going Project** that creates R-codes for computing indexes from 
 
 
 
-# Empowerment in Agriculture
+# Constructing Empowerment in Agriculture Index
 
 ```{}
 # Load required packages
