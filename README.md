@@ -4,7 +4,7 @@
 
 ### Summary
 
-This is an **On-going Project** that creates R-codes for computing indexes from mathematical formulas. Most of the indexes are used for tracking improvement, empowerment or changes. Please expect frequent file updates. The table below shows some on-going related works:
+This is an **On-going Project** that creates R-codes for computing indexes from mathematical formulas. Most of the indexes are used for tracking improvement, empowerment or changes. Please expect frequent file updates. The table below shows some of the on-going related works:
 
 | URLs | Description | Status |
 |-------|--------------------| --------- |
