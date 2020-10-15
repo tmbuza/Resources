@@ -1,4 +1,0 @@
-# (PART)  Project-Level Index 
-
-# The project-level WEAI {#proweai}
-A pro-WEAI measures women’s empowerment in various types of agricultural development projects [@Malapit2019].
