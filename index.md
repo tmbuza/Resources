@@ -3,15 +3,21 @@
   <link rel="stylesheet" type="text/css" href="./css/ghindexes.css">
 </head>
 
-<!-- <style>
-.page-header {color: #ffff;text-align: center; padding: 5rem 6rem; background-color: #0473aa; background-image: linear-gradient(180deg, #1d1599, #045d23);}
-.page-header h2{font-size: 24px;
-body{width: 1200px; margin: 0;}
 
-</style> -->
+### Summary
+
+This is an **On-going Project** that creates R-codes for computing indexes from mathematical formulas. Most of the indexes are used for tracking improvement, empowerment or changes. Please expect frequent file updates. The table below shows some on-going related works:
+
+| URLs | Description | Status |
+|-------|--------------------| --------- |
+|[Website](https://tmbuza.github.io/indexbook/) | Github Pages |  |
+|[eBook](https://complexdatainsights.com/indexbook/) | Constructing Indexes With R | In progress |
+|[Code](https://github.com/tmbuza/indexbook) | Github repository | Updated continually... |
+|[README](https://github.com/tmbuza/indexbook/blob/master/README.md/) | Brief summary | Updated continually... |
 
 
-# Empowerment in Agriculture
+
+## Constructing Empowerment in Agriculture Index
 
 ```{}
 # Load required packages
@@ -26,14 +32,14 @@ library(viridis)
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-# Focus: Five Dimensions of Empowerment
+## Focus: Five Dimensions of Empowerment
 
 
 ## Methodology 
 
 Here we adopt the model develoved previously [@Alkire2011]
 
-For more details refer to the [R-Model workflow](https://complexdatainsights/indexes/fiveDE.html)
+For more details refer to the [R-Model workflow](https://complexdatainsights.com/indexbook/fiveDE.html)
 
 Model: [@Alkire2011]
 
@@ -52,7 +58,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 ## 5DE Methodology 
 
-[R-Model workflow](https://tmbuza.github.io/indexes/)
+[R-Model workflow](https://tmbuza.github.io/indexbook/)
 
 
 1. Method 1 focuses on the percentage of empowered women and adequacies among the disempowered. 
@@ -189,8 +195,6 @@ p2 <- HCRatio[1:10,] %>%
 ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 ```
 
-![](./_figs/IDX-uncensored-fig-1.png)
-
-<img src="https://github.com/tmbuza/indexbook/blob/gh_pages/_figs/IDX-uncensored-fig-1.png">
+<!-- ![](./_figs/IDX-uncensored-fig-1.png) -->
 
 <img src="./_figs/IDX-uncensored-fig-1.png">
