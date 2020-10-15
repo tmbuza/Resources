@@ -53,7 +53,7 @@ d10Hn <- round(mean(uncensored$d10), 3)
 uncensoredM0Index <- sum(d01Hn, d02Hn, d03Hn, d04Hn, d05Hn, d06Hn, d07Hn, d08Hn, d09Hn, d10Hn)
 uncensoredFiveDE <- 1-uncensoredM0Index
 
-Inadequate <- c(d01Hn, d02Hn, d03Hn, d04Hn, d05Hn, d06Hn, d07Hn, d08Hn, d09Hn, d10Hn, uncensoredM0Index, uncensoredFiveDE)
+Uncensored <- c(d01Hn, d02Hn, d03Hn, d04Hn, d05Hn, d06Hn, d07Hn, d08Hn, d09Hn, d10Hn, uncensoredM0Index, uncensoredFiveDE)
 
 cat("\nVerify: Sum of Indicators M0s equals the overall M0\n")
 paste("IndicatorSum =", round(uncensoredM0Index, digits = 3), "and overall M0 =", round(ciM0, digits = 3))
@@ -115,7 +115,7 @@ d10kHn <- round(mean(censored$d10k), 3)
 censoredM0Index <- d01kHn + d02kHn + d03kHn + d04kHn + d05kHn + d06kHn + d07kHn + d08kHn + d09kHn + d10kHn
 censoredFiveDE <- 1-censoredM0Index
   
-Disempowered <- c(d01kHn, d02kHn, d03kHn, d04kHn, d05kHn, d06kHn, d07kHn, d08kHn, d09kHn, d10kHn, censoredM0Index, censoredFiveDE)
+Censored <- c(d01kHn, d02kHn, d03kHn, d04kHn, d05kHn, d06kHn, d07kHn, d08kHn, d09kHn, d10kHn, censoredM0Index, censoredFiveDE)
 
 cat("Verify: Sum of Indicators M0s equals the overall M0\n")
 paste("IndicatorSum =", round(censoredM0Index, digits = 2), "and overall M0 =", round(cikM0, digits = 2))
@@ -127,7 +127,7 @@ cat("Status:", ifelse(round(censoredM0Index, digits = 2) == round(cikM0, digits 
 ```{r message=FALSE, warning=FALSE}
 Indicator <- c("Indicator01", "Indicator02", "Indicator03", "Indicator04", "Indicator05", "Indicator06","Indicator07", "Indicator08", "Indicator09", "Indicator10", "M0", "FiveDE" )
 
-HCRatio <- data.frame(Indicator, Inadequate, Disempowered)
+HCRatio <- data.frame(Indicator, Uncensored, Censored)
 
 ```
 
@@ -140,7 +140,7 @@ knitr::kable(
 ```
 
 ### Plot the Results
-```{r uncensored-fig, fig.cap='Absolute and relative contribution of Indicator to disempowerment', out.width='80%', fig.asp=.75, fig.align='center'}
+```{r}
 library(tidyverse)
 library(viridis)
 
@@ -150,7 +150,7 @@ p1 <- HCRatio[1:10,] %>%
   theme_bw() +
   scale_fill_viridis(discrete = TRUE) +
   geom_bar(stat = "identity", position = "stack", width = .5, color = "#f1f1f1") + 
-  labs(x = "", y = "Absolute Contribution", title = "")
+  labs(x = "Disempowerment Scores", y = "Absolute Contribution", title = "")
 
 p2 <- HCRatio[1:10,] %>% 
   gather(key = "variable", value = value, -Indicator) %>% 
@@ -158,9 +158,11 @@ p2 <- HCRatio[1:10,] %>%
   theme_bw() +
   scale_fill_viridis(discrete = TRUE) +
   geom_bar(stat = "identity", position = "fill", width = .5, color = "#f1f1f1") +
-  labs(x = "", y = "Relative Contribution", title = "") +
+  labs(x = "Disempowerment Scores", y = "Relative Contribution", title = "") +
   scale_y_continuous(labels = scales::percent)
+```
 
+```{r uncensored-fig, fig.align='center', fig.asp=.75, fig.cap='Absolute and relative contribution of Indicator to disempowerment', fig.width=8, out.width='80%'}
 ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 ```
 
