@@ -17,7 +17,7 @@ This is an **On-going Project** that creates R-codes for computing indexes from 
 
 
 
-## Constructing Empowerment in Agriculture Index
+# Constructing Empowerment in Agriculture Index
 
 ```{}
 # Load required packages
@@ -32,7 +32,7 @@ library(viridis)
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ```
 
-## Focus: Five Dimensions of Empowerment
+# Focus: Five Dimensions of Empowerment
 
 
 ## Methodology 
@@ -195,6 +195,8 @@ p2 <- HCRatio[1:10,] %>%
 ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 ```
 
-<!-- ![](./_figs/IDX-uncensored-fig-1.png) -->
+![](./_figs/IDX-uncensored-fig-1.png)
 
-<img src="./_figs/IDX-uncensored-fig-1.png">
+<img src="https://github.com/tmbuza/indexbook/blob/gh_pages/_figs/IDX-uncensored-fig-1.png">
+
+<img src="./IDX-uncensored-fig-1.png">
