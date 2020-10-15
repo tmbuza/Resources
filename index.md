@@ -43,7 +43,7 @@ For more details refer to the [R-Model workflow](https://complexdatainsights.com
 
 Model: [@Alkire2011]
 
-```{block, type="tmbinfo", echo=TRUE}
+```{}
 # Load required packages
 load("data/packages.RData")
 load("data/globalSetup.RData")
