@@ -1,9 +1,6 @@
-# (PART) Index Components {-}
+# Getting Started {#getstarted}
 
-# Components of an Index {#components}
-## Computing the 5DE subindexes {#fiveDE}
-* Model: [@Alkire2011]
-
+## Cinstructing Empowerment Indexes
 
 ```{r message=FALSE, warning=FALSE}
 # Load required packages
@@ -164,7 +161,7 @@ ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
 ```
 
 ### Summary
-* **Our goal**: See Chapter \@ref(components)
+* **Our goal**: See Chapter \@ref(getstarted)
 * **Model used**: Poverty analysis [@Alkire2011]
 * **Indicator Contributions**
   * Figure:  See Figure \@ref(fig:uncensored-fig)
