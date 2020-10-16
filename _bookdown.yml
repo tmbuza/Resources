@@ -7,7 +7,7 @@ delete_merged_file: true
 
 rmd_files: [
 "index.Rmd",
-"01-fiveDE.Rmd",
+"01-components.Rmd",
 "02-weai.Rmd",
 "03-proweai.Rmd",
 "04-hersEApoultry.Rmd",
