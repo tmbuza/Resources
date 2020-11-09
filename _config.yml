@@ -1,5 +1,5 @@
-theme: jekyll-theme-cayman
+otheme: jekyll-theme-cayman
 show_downloads: true
-title: Constructing Empowerment Indexes Using R
-description: Aggregating Complex Index Formulas Into Reproducible R Code
-site_url: https://tmbuza.github.io/indexbook/
+title: Analytics Resources
+description: Fostering Reproducibility in Complex Data Analytics
+site_url: https://tmbuza.github.io/Resources/
