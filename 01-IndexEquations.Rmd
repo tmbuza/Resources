@@ -168,5 +168,5 @@ FiveDE = H_e + (H_n  × A_a) \label{5DE2}\tag{eq9}
 
 ## Stay tuned with new updates
 
-Please visit our [GitHub Page](https://tmbuza.github.io/indexbook/) for latest updates and link to more resources. Comments, bug reports and pull requests are always welcome.
+Please visit our [GitHub Page](https://tmbuza.github.io/Resources/) for latest updates and link to more resources. Comments, bug reports and pull requests are always welcome.
 
