@@ -168,5 +168,5 @@ The contribution of each indicator to the disempowerment is determined by decomp
 
 ## Stay tuned with new updates
 
-Please visit our [GitHub Page](https://tmbuza.github.io/indexbook/) for latest updates and link to more resources. Comments, bug reports and pull requests are always welcome.
+Please visit our [GitHub Page](https://tmbuza.github.io/indexbook/) or the [WebPage](https://complexdatainsights.com/Resources/) for latest updates . Comments, bug reports and pull requests are always welcome.
 
