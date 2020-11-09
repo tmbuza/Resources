@@ -4,11 +4,11 @@
 </head>
 
 
-# Constructing Indexes in R
+# Resources in progress
 
-This is an **On-going Project** that creates R-codes for computing indexes from mathematical formulas. Most of the indexes developed in this project are useful for tracking improvement, perfomance, empowerment, impact or desired changes. 
+We create R-codes for computing indexes from known mathematical formulas. The indexes can be useful for a variety of multidimensional measurement, including tracking improvement, perfomance, empowerment, impact or desired changes. For the most part we follow the pattern set forth by [Alkire-Foster method]() commonly used to measure multidimensional poverty. 
 
-## Empowerment Indexes (In progress)
+## 1. Empowerment Indexes (In progress)
 
 | URLs | Description | Remarks |
 |-------|--------------------| --------- |
