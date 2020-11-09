@@ -4,15 +4,14 @@
 </head>
 
 
-# Summary
+# Constructing Indexes in R
 
-This is an **On-going Project** that creates R-codes for computing indexes from mathematical formulas. Most of the indexes developed in this project are useful for tracking improvement, perfomance, empowerment, imact or desired changes. 
+This is an **On-going Project** that creates R-codes for computing indexes from mathematical formulas. Most of the indexes developed in this project are useful for tracking improvement, perfomance, empowerment, impact or desired changes. 
 
-## Related Work (In progress)
+## Empowerment Indexes (In progress)
 
-| URLs | Description | Status |
+| URLs | Description | Remarks |
 |-------|--------------------| --------- |
-|[GH-Pages](https://tmbuza.github.io/indexbook/) | Github Pages | This site |
-|[eBook](https://complexdatainsights.com/indexbook/) | R-Markdown Report| Updated regularly...  |
-|[Code](https://github.com/tmbuza/indexbook) | Github repository | Updated regularly... |
-|[README](https://github.com/tmbuza/indexbook/blob/master/README.md/) | Brief summary | Updated regularly... |
+|[Models](https://complexdatainsights.com/Resources/01-IndexEquations.html) | Created using R-Markdown| Based on [Alkire-Foster method](https://ophi.org.uk/research/multidimensional-poverty/alkire-foster-method/)|
+|[R-Code](https://github.com/tmbuza/Resources) | Github repository | Updated regularly... |
+|[README](https://github.com/tmbuza/Resources/blob/master/README.md/) | Repository README | Updated regularly... |
