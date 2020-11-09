@@ -1,46 +1,56 @@
---- 
-# title: "Empowerment in Agriculture"
-# author: "Teresia Mrema Buza"
+---
+# title: "Construction of indexes using R"
 date: "Updated: `r Sys.time()`"
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
     config: 
       toc:
-       collapse: section
+       # collapse: section
       search: yes
       fontsettings:
         size: 2
     split_by: chapter
-    # split_by: section
+    # split_by: ""
     includes:
       # before_body: headerbanner.html
       # after_body: footerbanner.html
     df_print: paged
     always_allow_html: true
+    number_sections: false
 css: [style.css, css/tmbbook.css, toc.css]
+slug: constructing-indexes-in-r
+categories:
+  - R
+  - Technical
+tags:
+  - R Markdown
+  - indexbook
+header_image: "_figs/IDX-uncensored-fig-1.png"
 documentclass: book
 bibliography: [book.bib, packages.bib, indexes.bib]
 biblio-style: apalike
 link-citations: yes
+colorlinks: yes
+graphics: yes
 github-repo: tmbuza/indexbook
-description: "Construction of indexes with R."
+url: 'https\://tmbuza.github.io/indexbook/'
+description: "Construction of indexes using R."
 show_downloads: true
 favicon: "favicon.ico"
+cover-image: IDX-indictorcontr-fig-1.png
 ---
 
-# Introduction {-#intro}
+# Construction of indexes using R {-#title}
 
-```{block, type="", echo=TRUE}
+```{block, echo=TRUE}
 <center>
 
-## Graphical Model
+<h3>Graphical Model for Indicator Contribution</h3> 
 
-**Indicator contribution to an index**
+![Disempowerment Index (M0): Censored = 0.44; Uncensored = 0.45](_figs/IDX-indictorcontr-fig-1.png)
 
 </center>
-
-![](_figs/IDX-uncensored-fig-1.png)
 ```
 
 

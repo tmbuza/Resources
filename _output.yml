@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Construction of Indexes in R</a></li>
+        <li><a href="./">Resources for Data Analytics</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/tmbuza/indexbook/edit/master/%s

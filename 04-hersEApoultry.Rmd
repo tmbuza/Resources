@@ -1,5 +1,0 @@
-# (PART) Poultry Index {-}
-
-# Applying WEAI to construct Poutry Production Index in Uganda
-
-

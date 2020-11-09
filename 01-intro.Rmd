@@ -1,0 +1,408 @@
+# (PART) Basics {-}
+
+# Getting Started {#getstarted}
+
+```{r message=FALSE, warning=FALSE}
+source("_common.R")
+
+library(tidyverse)
+```
+
+Here we develop R syntaxes useful as elements for computing indexes that enable users to track improvement, performance, growth, impact, changes, success, or empowerment.
+
+<br>
+
+## Motivation
+We are fostering reproducibility, portability, and shareability of methods for computing indexes. Most of the available methodologies previously described elsewhere [@Alkire2011]; [@Alkire2012]; [@Alkire2013]; [@Malapit2019] are either expensive, not easily reproduced by a novice analyst. Well, R is a free software environment for data analysis, statistical computing, and high-quality graphics. However, without any prior experience in R, you may experience some challenges at the beginning. That is why we devote our efforts to provide user-friendly chunks and syntaxes that will help you construct multidimensional indexes without difficulties.
+
+<br>
+
+## Workflow
+The indexes generated here are useful for tracking improvement, performance, growth, impact, changes, or empowerment. each index is constructed from cummulative scores from individual variable nested withing the indicators, and subsequently the indicators are nested withing the primary domains. The approach for creating the indexes follow a similar pattern (Figure X & X) 
+
+```{r indexflow-fig, echo=FALSE, fig.align='center'}
+indexflow1 <- DiagrammeR::grViz("
+  digraph graph2 {
+  
+  # graph[layout = dot, rankdir = LR]
+  graph[layout = dot, rankdir = TB]
+  
+  # node definitions
+  node [shape = rect, width = 10, height = 4.5, penwidth = 2.0, fixedsize = true, fontname = Helvetica, fontsize = 50]
+
+  # edge definitions
+edge [arrowhead = normal, minlen = 2.5, penwidth = 6, color = black, ]
+
+  plan [label = 'A \n DATA \n ACQUISITION', shape = invhouse, style = filled, fillcolor = beige, height = 7]
+
+  b [label = 'Subject-Matter \n Survey Data']
+  c [label = 'Clean & Tidy \n  Data Spreadsheet']
+  d [label = 'Unique Domains \n Measured Concepts']
+  e [label = 'Domain Indicators \n Indicator Variables']
+
+  clean [label = 'B \n DATA TIDYING & \n TRANSFORMATION', shape = invhouse, style = filled, fillcolor = beige, height = 7]
+  g [label = 'Cluster Indicators \n Assign Weights \n Assign Variables']
+  h [label = 'Score the Responses \n Aggregate Scores']
+
+  index [label = 'C \n INDEX \n CONSTRUCTION', shape = invhouse, style = filled, fillcolor = beige, height = 7]
+  i [label = 'Apply Cutoffs \n Compute Composite Index']
+  j [label = 'Validate Indexes\nDo Indicator Analysis\n make Best Conclusion']
+  
+  {plan} -> b -> c -> d -> e {clean} -> g -> h {index} -> i -> j
+  }", 
+  height = 500)
+
+indexflow1
+
+```
+
+```{r include=FALSE}
+# (WD <- getwd())
+# if (!is.null(WD)) setwd(WD)
+
+library(htmlwidgets)
+library(webshot)
+
+saveWidget(indexflow1,"/Users/tmbuza/Dropbox/GITHUB_REPOs/indexbook/_figs/indexflow1.html", selfcontained = TRUE)
+webshot("/Users/tmbuza/Dropbox/GITHUB_REPOs/indexbook/_figs/indexflow1.html", "/Users/tmbuza/Dropbox/GITHUB_REPOs/indexbook/_figs/indexflow1.png", delay =5, vwidth = 700, vheight=300)
+webshot("/Users/tmbuza/Dropbox/GITHUB_REPOs/indexbook/_figs/indexflow1.html", "/Users/tmbuza/Dropbox/GITHUB_REPOs/indexbook/_figs/indexflow1.pdf", delay =5, vwidth = 700, vheight=300)
+
+```
+
+> Hint: It may be a good practice exploring variable crosstabulation or calculate the correlation coefficients before assigning them to the indicators or domains.
+<br>
+
+## Cross Tabulation and Chi-Square
+To gain a clear insight of the variables nested within indicators, we can use cross tabulation and Chi-Square analysis to summarize observations by categories. What we need here is data collected on well-defned categorical variables.
+
+<br>
+
+### Cross-referencing figures, tables, and equations
+
+See Figure \@ref(fig:cars-plot).
+
+```{r cars-plot, fig.cap="The cars data.", echo=FALSE}
+par(mar = c(4, 4, .2, .1))
+plot(cars)  # a scatterplot
+```
+
+Also see Equation \@ref(eq:mean).
+
+\begin{equation}
+\bar{X} = \frac{\sum_{i=1}^n X_i}{n} (\#eq:mean)
+\end{equation}
+
+And see Table \@ref(tab:mtcars).
+
+```{r mtcars, echo=FALSE}
+knitr::kable(mtcars[1:5, 1:5], caption = "The mtcars data.")
+```
+<br>
+
+## Custom Index Models {#models}
+The custom index models developed at CDI can track improvement, performance, growth, impact, changes, success, or empowerment over time. The starting point is using well-defined dimensions, indicators, and the variables nested within each indicator. We adopted the M0 measurements famous for constructing the poverty index [@Alkire2013; @Malapit2019]. The final index is decomposed to confirm the exact absolute and relative contribution of each indicator. See Figure \@ref(fig:indexflow-fig).
+
+<br>
+<br>
+
+### Model 1: Empowerment Index
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(viridis)
+
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+<br>
+
+### Empowered individuals
+```{r message=FALSE, warning=FALSE}
+achieveTable1 <- readRDS("../MKPROJECT/_data/achieveTable1.rds")
+
+library(tidyr)
+empP1 <- achieveTable1 %>% select(Cutoff, Phase_1, Phase_2) %>% gather(key = "Percentage", value = "value", Phase_1, Phase_2, -Cutoff) %>% 
+  ggplot(aes(x = Cutoff, y = value, color = Percentage)) +
+  geom_point(size =3) +
+  geom_line(size = 1) + 
+  labs(x = "Adequate Achievement", y = "Percent of Respondent", title = "", color = "Survey Phase") +  
+  theme_bw() + 
+  scale_x_continuous(breaks = c(1 ,2, 3, 4, 5, 6, 7, 8, 9, 10)) +
+  scale_y_continuous(labels = scales::percent)
+
+empP2 <- empP1 + annotate("rect", xmin = 8, xmax = 10.2, ymin = 0, ymax = 1, 
+           alpha = .5, fill = "#00ff00") +
+  # annotate("text", x=1, y=0.1, label= "Empowered\n(ci ≤ 20%)") + 
+  annotate("text", x = 9, y=0.1, label = "Adequate Achievement\n(80% of Indicators)", size = 3) 
+
+ggarrange(empP2, ncol = 1, common.legend = TRUE, legend = "none")
+```
+
+<br>
+
+### Intensity of Disempowered individuals
+```{r}
+library(tidyr)
+censoredachieveTable1 <- readRDS("../MKPROJECT/_data/censoredachieveTable1.rds")
+
+disempP1 <- censoredachieveTable1 %>% select(Cutoff, Phase_1, Phase_2) %>% gather(key = "Percentage", value = "value", Phase_1, Phase_2, -Cutoff) %>% 
+  ggplot(aes(x = Cutoff, y = value, color = Percentage)) +
+  geom_point(size =3) +
+  geom_line(size = 1) + 
+  labs(x = "Disempowerment Cutoff", y = "Percent of Respondent", title = "", color = "Survey Phase") + 
+  theme_bw() + 
+  scale_x_continuous(breaks = c(0, 1 ,2, 3, 4, 5, 6, 7, 8, 9, 10)) +
+  scale_y_continuous(labels = scales::percent)
+
+disempP2 <- disempP1 + annotate("rect", xmin = 2, xmax = 10, ymin = 0, ymax = 1., 
+           alpha = .5, fill = "#ff5555") +
+ annotate("rect", xmin = 0, xmax = 2, ymin = 0, ymax = 1, 
+           alpha = .5, fill = "#00ff00")  +
+  annotate("text", x=1, y=0.1, label= "Empowered\n(ci ≤ 20%)", size = 3) + 
+  annotate("text", x = 8, y=0.1, label = "Disempowered\n(ci > 20%)", size = 3) 
+
+# ggarrange(disempP2, ncol = 1, common.legend = TRUE, legend = "none")
+```
+
+# Grid of plots
+
+<hr>
+
+#### Empowered vs Disempowered
+```{r fig.width=7}
+ggarrange(empP2, disempP2, ncol = 2, common.legend = TRUE, legend = "none")
+```
+
+<br>
+
+```{r distribute1, fig.height=10, fig.width=10, message=FALSE, warning=FALSE}
+groupdata <- readRDS("~/Dropbox/GITHUB_REPOs/MKPROJECT/_data/groupdata.rds")
+
+library(ggpubr)
+
+gg <- groupdata %>% 
+ ggplot(aes(Variable, AbsuluteIndex, colour = Variable))
+
+nolegend <- theme(legend.position = 0)
+
+bp <- gg + geom_boxplot(alpha = 0.7) + #nolegend +
+  ggtitle("Box Plot") + mediumaxislayout2 + noxlabels
+
+vp <- gg + geom_violin(alpha = 0.7) + #nolegend +
+  ggtitle("Violin Plot") + mediumaxislayout2 + noxlabels
+
+cp <- gg + stat_summary(fun = mean, geom = "col", fill = "white") + #nolegend +
+  ggtitle("Column Plot") + mediumaxislayout2 + noxlabels
+
+bvp <- gg + geom_boxplot(width = 0.15, fill = "white", show.legend = FALSE) +
+geom_violin(alpha = 0.7) + #nolegend +  
+  ggtitle("Box-Violin Plot") + mediumaxislayout2 + noxlabels
+
+bjp <- gg + geom_boxplot(alpha = 0.7) + #nolegend +
+  geom_jitter(width = 0.05) +
+  ggtitle("Box-Jitter Plot") + mediumaxislayout2 + noxlabels
+
+dp  <- groupdata %>%  
+  ggplot(aes(AbsuluteIndex, colour = Variable)) + 
+  geom_density() + #nolegend +
+  ggtitle("Density Plot") + mediumaxislayout2
+
+ggarrange(vp, bp,"","", cp, dp, "","", bvp, bjp, ncol = 2, nrow = 5, labels = c(1:2,"","", 3:4, "","", 5:6), common.legend = TRUE, legend = "right", heights = c(1.2, 0.1, 1.2, 0.1, 1.2))
+
+```
+
+
+<br>
+
+> [R-Model workflow](https://complexdatainsights.com/indexbook/)
+
+<br>
+
+**Uncensored Head-Count Ratios**
+
+```{r message=FALSE, warning=FALSE}
+library(dplyr)
+uncensored <- readRDS("_data/uncensored.rds")
+
+ciM0 <- round(mean(uncensored$ci), 3)
+d01Hn <- round(mean(uncensored$d01), 3)
+d02Hn <- round(mean(uncensored$d02), 3)
+d03Hn <- round(mean(uncensored$d03), 3)
+d04Hn <- round(mean(uncensored$d04), 3)
+d05Hn <- round(mean(uncensored$d05), 3)
+d06Hn <- round(mean(uncensored$d06), 3)
+d07Hn <- round(mean(uncensored$d07), 3)
+d08Hn <- round(mean(uncensored$d08), 3)
+d09Hn <- round(mean(uncensored$d09), 3)
+d10Hn <- round(mean(uncensored$d10), 3)
+
+uncensoredM0Index <- sum(d01Hn, d02Hn, d03Hn, d04Hn, d05Hn, d06Hn, d07Hn, d08Hn, d09Hn, d10Hn)
+uncensoredFiveDE <- 1-uncensoredM0Index
+
+Uncensored <- c(d01Hn, d02Hn, d03Hn, d04Hn, d05Hn, d06Hn, d07Hn, d08Hn, d09Hn, d10Hn, uncensoredM0Index, uncensoredFiveDE)
+
+paste("IndicatorSum =", round(uncensoredM0Index, digits = 2))
+paste("M0 =", round(ciM0, digits = 2))
+cat("Status:", ifelse(round(uncensoredM0Index, digits = 2) == round(ciM0, digits = 2), "PASSED", "FAILED"))
+```
+
+<br>
+
+**Censoring Inadequate Achievements**
+
+> Note: A respondent is identified as disempowered if ci > k and empowered if ci ≤ k. 
+> Censoring: If ci ≤ k the score is replaced by 0, otherwise cik = ci, d01k = d01, d02k = d02, and so forth.
+
+```{r}
+library(dplyr)
+uncensored <- readRDS("_data/uncensored.rds")
+
+# Set the cutoff(k) for empowered among inadequacies
+k = 0.2
+
+# Create columns containing censored achievements.
+censored <- uncensored %>% 
+  mutate(
+    cik = ifelse(ci <= k, 0, ci),
+    d01k = ifelse(ci <= k, 0, d01), 
+    d02k = ifelse(ci <= k, 0, d02), 
+    d03k = ifelse(ci <= k, 0, d03), 
+    d04k = ifelse(ci <= k, 0, d04),
+    d05k = ifelse(ci <= k, 0, d05),
+    d06k = ifelse(ci <= k, 0, d06),
+    d07k = ifelse(ci <= k, 0, d07),
+    d08k = ifelse(ci <= k, 0, d08),
+    d09k = ifelse(ci <= k, 0, d09),
+    d10k = ifelse(ci <= k, 0, d10)
+    )
+
+saveRDS(censored, ("_data/censored.rds"))
+```
+
+<br>
+
+**Censored Head count Ratios**
+```{r message=FALSE, warning=FALSE}
+censored <- readRDS("_data/censored.rds")
+
+Hn <- mean(censored$cik)
+cikM0 <- Hn
+indexFiveDE <- 1 - cikM0
+
+
+cikM0 <- round(mean(censored$cik), 3)
+d01kHn <- round(mean(censored$d01k), 3)
+d02kHn <- round(mean(censored$d02k), 3)
+d03kHn <- round(mean(censored$d03k), 3)
+d04kHn <- round(mean(censored$d04k), 3)
+d05kHn <- round(mean(censored$d05k), 3)
+d06kHn <- round(mean(censored$d06k), 3)
+d07kHn <- round(mean(censored$d07k), 3)
+d08kHn <- round(mean(censored$d08k), 3)
+d09kHn <- round(mean(censored$d09k), 3)
+d10kHn <- round(mean(censored$d10k), 3)
+
+censoredM0Index <- sum(d01kHn, d02kHn, d03kHn, d04kHn, d05kHn, d06kHn, d07kHn, d08kHn, d09kHn, d10kHn)
+censoredFiveDE <- 1-censoredM0Index
+
+Censored <- c(d01kHn, d02kHn, d03kHn, d04kHn, d05kHn, d06kHn, d07kHn, d08kHn, d09kHn, d10kHn, censoredM0Index, censoredFiveDE)
+
+paste("IndicatorSum =", round(censoredM0Index, digits = 2))
+paste("M0 =", round(cikM0, digits = 2))
+cat("Status:", ifelse(round(censoredM0Index, digits = 2) == round(cikM0, digits = 2), "PASSED", "FAILED"))
+
+```
+
+
+```{r uncensored-tab, tidy=FALSE}
+paste("IndicatorSum =", round(censoredM0Index, digits = 3))
+paste("M0 =", round(ciM0, digits = 3))
+cat("Status:", ifelse(round(censoredM0Index, digits = 3) == round(ciM0, digits = 3), "PASSED", "FAILED"))
+```
+
+<br>
+
+**Create Dataframe**
+```{r }
+Indicator <- c("Indicator01", "Indicator02", "Indicator03", "Indicator04", "Indicator05", "Indicator06","Indicator07", "Indicator08", "Indicator09", "Indicator10", "M0", "FiveDE" )
+
+HCRatio <- data.frame(Indicator, Uncensored, Censored)
+```
+
+
+### Head Count Ratios
+```{r indextable1, tidy=FALSE}
+flextable::flextable(head(HCRatio, 20), cwidth = 1.2)
+```
+
+```{r indextable2, tidy=FALSE, include=FALSE}
+knitr::kable(
+  head(HCRatio, 20), caption = 'Contribution of each indicator to disempowerment!',
+  booktabs = TRUE
+)
+```
+
+<br>
+
+### Graphical Distribution of Head Count Ratio
+```{r}
+library(tidyverse)
+library(viridis)
+
+p1 <- HCRatio[1:10,] %>% 
+  gather(key = "variable", value = value, -Indicator) %>% 
+  ggplot(aes(x = variable, y = value, fill = Indicator)) +
+  theme_bw() +
+  scale_fill_viridis(discrete = TRUE) +
+  geom_bar(stat = "identity", position = "stack", width = .5, color = "#f1f1f1") + 
+  labs(x = "Disempowered", y = "Absolute Contribution", title = "", fill = "ColorCode" )
+
+p2 <- HCRatio[1:10,] %>% 
+  gather(key = "variable", value = value, -Indicator) %>% 
+  ggplot(aes(x = variable, y = value, fill = Indicator)) +
+  theme_bw() +
+  scale_fill_viridis(discrete = TRUE) +
+  geom_bar(stat = "identity", position = "fill", width = .5, color = "#f1f1f1") +
+  labs(x = "Disempowered", y = "Relative Contribution", title = "", fill = "ColorCode" ) +
+  scale_y_continuous(labels = scales::percent)
+```
+
+```{r indexfig, fig.align='center', fig.asp=.75, fig.cap='Absolute and relative contribution of Indicator to disempowerment', fig.width=8, out.width='80%'}
+ggpubr::ggarrange(p1, p2, common.legend = TRUE, legend = "right")
+```
+
+<br>
+
+### Mosaic Plot
+
+```{r message=FALSE, warning=FALSE, fig.cap="Mosaic plot between selected variables"}
+library(tidyverse)
+library(ggmosaic)
+library(patchwork)
+
+surveyUG <- readRDS("../TemplateBOOK/_data/surveyUG.rds")
+surveyUG$InfoSource <- as.factor(surveyUG$SourcesOfInfo)
+infosource <- surveyUG %>% select(Phase, Sex, SourcesOfInfo)
+
+infosource <- infosource %>% 
+    mutate(
+    Phase = ifelse(Phase == "P1", "Phase1", "Phase2"),
+    Sex = ifelse(Sex == 1, "Male", "Female")
+    )
+
+mos1 <- ggplot(data = infosource) +
+    geom_mosaic(aes(x = product(Sex, SourcesOfInfo), fill=Sex), na.rm=TRUE, offset = 0.02) + 
+  facet_grid(~ Phase) +
+  # geom_mosaic_label(aes(x = product(SourcesOfInfo), fill = Sex))
+  # labs(x="region", y=" ",  title=" Offset = 0.0") +
+  labs(x="Number of Info Sources", y="Sex of Respondent",  title="") +
+  scale_y_productlist(name = "") +
+  theme(axis.text.y=element_blank(), legend.position="bottom",
+        axis.text.x = element_text(angle = 90))
+
+
+# offset0 + offset1 + offset2 + plot_layout(ncol = 3)
+
+ggpubr::ggarrange(mos1, ncol = 1, common.legend = TRUE, legend = "right", labels = "")
+```
+
+
+<br>

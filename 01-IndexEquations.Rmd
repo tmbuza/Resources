@@ -1,0 +1,172 @@
+---
+title: " Empowerment Subindexes Equations"
+author: "Teresia Mrema Buza"
+date: "`r Sys.time()`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+    css: [style.css, css/tmbbook.css, toc.css]
+favicon: "favicon.ico"
+---
+
+# General Overview
+Most index equations are expressed algebraically. This make it convenient to transform them into R codes and make the whole process more reproducible.
+
+<br>
+
+## 1. Inadequacy scores
+```{block, echo=TRUE}
+  \begin{align}
+  c_i= \sum_{j=1}^n w_j × g_{ij} \label{ci}\tag{eq1}
+
+  \end{align}
+```
+  
+| Where,
+|     ci = Inadequacy scores of a respondent. 
+|     wj = Weight of an indicator.
+|     gij = Inadequacy binary status assigned based on empowerment cutoff.
+
+
+<br>
+
+## 2. Disempowered Headcount ratio
+```{block, echo=TRUE}
+  \begin{align}
+  H_n=  \frac{q}{N} \label{Hn}\tag{eq2}
+  \end{align}
+```
+
+| Where, 
+|     𝑞  is the number of respondents identified as disempowered and 
+|     N is the total number of respondents. 
+
+ 
+<br>
+
+## 3. Empowered Headcount ratio
+```{block, echo=TRUE}
+  \begin{align}	
+  H_e  = 1-H_n \label{He}\tag{eq3} 
+  \end{align}
+```
+  
+<br>
+
+## 4. Average Inadequacy Score
+This score measures the intensity of disempowerment individuals who failed to attain adequate achievement.
+```{block, echo=TRUE}
+  \begin{align}	
+ A_n =  \frac{\sum_{j=1}^{n}c_i(k)}{q} \label{An}\tag{eq4}
+  \end{align}
+```
+
+| Where,
+|     ci(k) is the censored inadequacy score 
+|     q is the number identified as disempowered.
+
+
+<br>
+
+## 5. Average Adequacy Score
+```{block, echo=TRUE}
+  \begin{align}	
+  A_a  = 1-A_n \label{Aa}\tag{eq5}
+  \end{align}	
+```
+
+
+<br>
+
+## 6. Disempowerment Index
+```{block, echo=TRUE}
+  \begin{align}	
+  MO  = H_n  × A_n \label{M01}\tag{eq6}
+  \end{align}	
+```
+
+<br>
+
+## 7. Alternative way of expressing M0
+```{block, echo=TRUE}
+  \begin{align}	
+  MO=  \frac{1}{n}  \sum_{i=1}^{N}{c_i(k)} \label{M02}\tag{eq7}
+  \end{align}
+```
+
+<br>
+
+## 8. Five domains of empowerment
+5DE Index assesses the degree to which women are empowered in the five domains of empowerment in agriculture.
+    
+```{block, echo=TRUE}
+  \begin{align}	
+  FiveDE = 1-MO \label{5DE1}\tag{eq8}
+  \end{align}
+```
+  
+<br>
+
+## 9. Alternative way of computing 5DE
+```{block, echo=TRUE}
+\begin{align}	
+FiveDE = H_e + (H_n  × A_a) \label{5DE2}\tag{eq9}
+\end{align}
+```
+
+| Where, 
+|     He = Empowered headcount ratio
+|     Hn = Disempowered headcount ratio
+|     Aa = The average adequacy score of disempowered
+
+<br>
+<hr>
+
+
+>Contribution of each indicator to disempowerment is determined by decomposing the M0 into its censored components. The headcount ratio is computed to represent a proportion of the respondents who are disempowered and have inadequacy status in the specified indicator.
+
+<br>
+
+## 10. Head count ratio per indicator
+
+```{block, echo=TRUE}
+\begin{align}	
+  {h_j(k)} =  \frac{1}{N}\sum_{i=1}^{N} g_{ij}(k)  \label{hjk}\tag{eq10}
+  \end{align}
+```
+
+| Where,
+|     hj(k) = Indicator headcount ratio
+|     gij(k) = Indicator inadequacy status
+
+
+>We can apply pre-determined indicator weights and compute the absolute and relative contribution of an indicator.
+
+<br>
+
+## 11. Absolute contribution of indicator
+
+```{block, echo=TRUE}
+  \begin{align}	
+  {Abs_j} = {w_j} × {h_j}(k) \label{Absj}\tag{eq11}
+  \end{align}
+```
+
+<br>
+
+## 12. Relative contribution of indicator
+```{block, echo=TRUE}
+  \begin{align}	
+ {Rel_j} = {w_j} × {h_j}(k) × {100} \label{Relj}\tag{eq12}
+  \end{align}
+```
+
+<br>
+<hr>
+<br>
+
+## Stay tuned with new updates
+
+Please visit our [GitHub Page](https://tmbuza.github.io/indexbook/) for latest updates and link to more resources. Comments, bug reports and pull requests are always welcome.
+

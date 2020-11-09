@@ -1,12 +1,30 @@
-/AWEAI/
-_indexes.Rmd
-_indexes.html
+# Author created files #
 
 
+
+# R related files #
 .Rproj.user
 .Rhistory
 .RData
 _publish.R
-_book
-_bookdown_files
+.Ruserdata
 rsconnect
+_book/*
+_bookdown_files/*
+packages.bib
+*-tikzDictionary
+css/box.css
+latex/blackbox.tex
+latex/infobox.tex
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+# Compiled example files
+examples/*.pdf
+examples/*.html
+examples/*/*.pdf
+examples/*/*.html
+examples/listings-settings.tex
