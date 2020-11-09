@@ -3,3 +3,5 @@ show_downloads: true
 title: Analytics Resources
 description: Fostering Reproducibility in Complex Data Analytics
 site_url: https://tmbuza.github.io/Resources/
+
+theme: jekyll-theme-cayman
