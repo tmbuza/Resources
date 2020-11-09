@@ -12,6 +12,6 @@ This is an **On-going Project** that creates R-codes for computing indexes from 
 
 | URLs | Description | Remarks |
 |-------|--------------------| --------- |
-|[Models](https://complexdatainsights.com/Resources/01-IndexEquations.html) | Created using R-Markdown| Based on [Alkire-Foster method](https://ophi.org.uk/research/multidimensional-poverty/alkire-foster-method/)|
+|[Models](https://complexdatainsights.com/Resources/subindexes-equations.html) | Created using R-Markdown| Based on [Alkire-Foster method](https://ophi.org.uk/research/multidimensional-poverty/alkire-foster-method/)|
 |[R-Code](https://github.com/tmbuza/Resources) | Github repository | Updated regularly... |
 |[README](https://github.com/tmbuza/Resources/blob/master/README.md/) | Repository README | Updated regularly... |
