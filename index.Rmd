@@ -1,5 +1,5 @@
 ---
-# title: "Construction of indexes using R"
+title: "Construction of indexes using R"
 date: "Updated: `r Sys.time()`"
 site: bookdown::bookdown_site
 output: 
