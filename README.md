@@ -1,13 +1,6 @@
-# Constructing Indexes With R
+# Analytics, Computing and Visualization Resources
 
-## Summary
+Most of the resources available in this repository are developed at the CDI (Complex Data Insights), LLC.
 
-This is an **On-Going Project** that aims at aggregating complex mathematical formulas into reproducible R-codes. Most of the indexes are used for tracking improvement, empowerment or changes. Please expect frequent file updates. The table below shows some of the on-going related works:
-
-| URLs | Description | Status |
-|-------|--------------------| --------- |
-|[Website](https://tmbuza.github.io/indexbook/) | Github Pages |  |
-|[eBook](https://complexdatainsights.com/indexbook/) | Constructing Indexes With R | In progress |
-|[Code](https://github.com/tmbuza/indexbook) | Github repository | Updated continually... |
 
 
